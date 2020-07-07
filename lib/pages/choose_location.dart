@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:http/http.dart';
 class ChooseLocation extends StatefulWidget {
   @override
   _ChooseLocationState createState() => _ChooseLocationState();
@@ -8,17 +8,7 @@ class ChooseLocation extends StatefulWidget {
 class _ChooseLocationState extends State<ChooseLocation> {
   int counter=0;
   void getData() async{
-    //simulate the network request for a username
-   String username = await Future.delayed(Duration(seconds: 3),(){
-     return 'yoshi';
-    });
 
-    //simulate to get the bio oof the username
-    String yes = await Future.delayed(Duration(seconds: 3),(){
-      return "time is up";
-    });
-
-    print("yessss");
   }
   @override
   Widget build(BuildContext context) {
