@@ -7,6 +7,19 @@ class ChooseLocation extends StatefulWidget {
 
 class _ChooseLocationState extends State<ChooseLocation> {
   int counter=0;
+  void getData() async{
+    //simulate the network request for a username
+   String username = await Future.delayed(Duration(seconds: 3),(){
+     return 'yoshi';
+    });
+
+    //simulate to get the bio oof the username
+    String yes = await Future.delayed(Duration(seconds: 3),(){
+      return "time is up";
+    });
+
+    print("yessss");
+  }
   @override
   Widget build(BuildContext context) {
     print('build called because of set state method');
@@ -33,6 +46,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
   void initState() {
     super.initState();
     print('init state called once');
+    getData();
     //run first whnt state widget is created
   }
 }
