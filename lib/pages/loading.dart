@@ -14,7 +14,6 @@ class _LoadingState extends State<Loading> {
     await worldTime.getTime();
     String time = worldTime.time;
     Navigator.pushReplacementNamed(context, '/home',arguments: { //send data to home screen
-
       'location':worldTime.location,
       'flag':worldTime.flag,
       'time': worldTime.time,
